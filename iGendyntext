@@ -1,0 +1,26 @@
+update 2.0: 
+
+Xenakis, sound synthesis, noise, stochastic, fun
+
+Redesigned interface, with lots more customisation options; you can create presets for fast switching in live performance, save and load banks of presets, and create random mappings. 
+
+
+iGendyn text: 
+
+Live and entertainingly noisy synthesiser, responding to multitouch and accelerometer control. You can control up to three independent voices at once. The sound synthesis method is GENeral DYNamic stochastic synthesis, as pioneered by Iannis Xenakis. Imagine a set of control points (CPs) which together define the shape of a time domain waveform; with each new cycle through this waveform, their relative positions are updated using probabilistic distributions.   
+
+This application was developed by Nick Collins, and is distributed for free. Nick runs the music informatics degree programmes at the University of Sussex, UK (http://www.informatics.sussex.ac.uk/courses/music-informatics/).  
+
+Further instructions: 
+
+On screen x is amplitude, y is minimum frequency (the frequency of scanning through the control points to make a waveform). Hold the device flat with longer edge pointing away from you. Then tilting left to right controls the degree of probabilistic change to control points with each output cycle. Tilting around the axis through the middle of the device parallel to the shorter edge will change the frequency range (between minimum and maximum frequencies of scanning allowed). It shoudl be much more intuitive to try this out for yourself and not worry about the exact mechanics of the algorithm unless you're really curious. For the second algorithm, below, the other two accelerometer axes also have an effect on the two parameters of a Lehmer random number generator.     
+
+Double touch to toggle displaying the options screen icon; click it to go to a page where you can change algorithm parameters such as the probability distributions for updating amplitude and duration positions of control points (AmpDistr and DurDistr, choose from LINear, CAUchy, LOGist, HYPerbcos, ARCsine, EXPon, to use Xenakis's names), as well as their parameters (Amp Param and Dur Param), the number of control points within each cycle (CPs), and which algorithm to use.     
+
+Two variants of the algorithm are provided:
+
+Gendy1: first order random walk on control point positions.
+
+Gendy2: second order random walk, with controllable Lehmer random number generator parameters mapped to two accelerometer axes. Closer to Hoffmann, Peter. (2000) The New GENDYN Program. Computer Music Journal 24:2, pp 31-38. 
+  
+For more reading, see Xenakis' Formalized Music (1992, Stuyvesant, NY: Pendragon Press) chapter 9 (pp 246-254) and chapters 13 and 14 (pp 289-322). The BASIC program in the book was written by Marie-Helene Serra so I think it helpful to credit her too.  
